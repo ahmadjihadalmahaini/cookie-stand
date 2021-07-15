@@ -1,111 +1,203 @@
-'use strict';
-
-let hours = ['6am', '7am', '8am', '9am', '10am', '11am', '12am', '1pm', '2pm', '3pm', '4pm', '5pm', '6pm', '7pm'];
-
-// from W3 schools
-function random(min, max) {
-    return Math.floor(Math.random() * (max - min + 1)) + min;
-}
-
-// constructor function
-function Shops(location, CustomerMin, CustomerMax, avgperSale) {
-    this.cityLocation = location;
-    this.min = CustomerMin;
-    this.max = CustomerMax;
-    this.avg = avgperSale;
-    this.randomCustomers = [];
-    this.avgCOOKIES = [];
-    this.total = 0;
-
-}
-
-let Seattle = new Shops('Seattle', 23, 65, 6.3);
-// console.log(Seattle);
-let Tokyo = new Shops('Tokyo', 3, 24, 1.2);
-let Dubai = new Shops('Dubai', 11, 38, 3.7);
-let Paris = new Shops('Paris', 20, 38, 2.3);
-let Lima = new Shops('Lima', 2, 16, 4.6);
+// let abdulraheem={
+//     name:'abdulraheem',
+//     job:'student',
+//     age:26,
+//     slaray:200000,
+    
+//     walk:function () {
+//         console.log('im walking here');
+//     }
 
 
 
-Shops.prototype.count = function () {
-    for (let i = 0; i < hours.length; i++) {
-        this.randomCustomers.push(random(this.min, this.max))
-    }
-}
-Seattle.count();
-Tokyo.count();
-Dubai.count();
-Paris.count();
-Lima.count();
+// }
 
-Shops.prototype.sellCookies = function () {
-    for (let i = 0; i < hours.length; i++) {
+// console.log(abdulraheem);
+// abdulraheem.walk();
 
-        this.avgCOOKIES.push(Math.floor(this.randomCustomers[i] * this.avg))
-        this.total += this.avgCOOKIES[i];
-
-    }
-}
-Seattle.sellCookies();
-Tokyo.sellCookies();
-Dubai.sellCookies();
-Paris.sellCookies();
-Lima.sellCookies();
-
-Shops.prototype.render = function () {
+// let ahmad={
+//     name:'ahmad',
+//     job:'student',
+//     age:30,
+//     slaray:350,
+    
+//     walk:function () {
+//         console.log('im walking here');
+//     }
 
 
 
-    //Table part
-    let parent = document.getElementById('dailyLocationsTotal');
+// }
 
-    //create table
-    let table = document.createElement('table');
-
-    // Append
-    parent.appendChild(table);
-
-    // creating the header row
-    let headerRow = document.createElement('tr');
-
-    //Append
-    table.appendChild(headerRow);
-
-    // make the heading
-
-    for (let i = 0; i < hours.length; i++) {
-        let Header = document.createElement('th');
-        headerRow.appendChild(Header);
-        // text content
-        Header.textContent = hours[i]
-
-    }
-
-    // the Data rows
-    let shopLocation = ['Seattle', 'Tokyo', 'Dubai', 'Paris', 'Lima'];
-
-    for (let i = 0; i < shopLocation.length; i++) {
-        let shopsRow = document.createElement('tr');
-        table.appendChild(shopsRow);
-
-        let Data = document.createElement('td');
-        shopsRow.appendChild(Data);
-
-        Data.textContent = shopLocation[i];
-
-    }
+// console.log(ahmad);
+// ahmad.walk();
 
 
+// camel case
+// userName
+
+
+// Pascal
+// Math
+// String
+// console.log(String);
+
+
+// let students=[];
+
+// function Student(name,age,weight){
+//     this.userName=name;
+//     this.age=age;
+//     this.weight=weight;
+//     console.log(this);
+
+//     this.walk=function () {
+//         console.log('im walking here',this.userName);
+//     }
+
+//     students.push(this);
+
+// }
+
+// new instance of the contstructor
+// let abdulraheem= new Student('abdulraheem',27,80);
+
+// abdulraheem.walk();
+
+// console.log(abdulraheem);
+
+// console.log(abdulraheem.weight);
+
+// console.log(Student.weight);
+
+// let ahmad= new Student('ahmad',30,95);
+// console.log(ahmad);
+// ahmad.walk();
+
+// let mohamad= new Student('mohammad',22,120);
+// console.log(mohamad);
+
+// let asmaa= new Student('asmaa',22,50);
+
+// methods should be written outside:
+// Student.prototype.talk=function () {
+    // console.log('hello from prototype method',this.age);
+    // console.log(this.age+this.weight);
+// }
+
+// mohamad.talk();
 
 
 
-}
+// *****TABLES
+/*
+header:
+the first row in the table it has table headings
+<table>
+ <tr>
+   <th>
+   </th>
+  </tr>
+</table>
+normal rows they have table data
+<table>
+ <tr>
+   <th>
+   </th>
+  </tr>
+  <tr>
+   <td>
+   </td>
+  </tr>
+    <tr>
+   <td>
+   </td>
+  </tr>
+  
+</table>
+footer row
+the last row in the table it has table headingsor table data
+<table>
+ <tr>
+   <th>
+   </th>
+  </tr>
+  <tr>
+   <td>
+   </td>
+  </tr>
+    <tr>
+   <td>
+   </td>
+  </tr>
+   <tr>
+   <th>
+   </th>
+  </tr>
+  
+</table>
+*/
 
-Seattle.render();
-Tokyo.render();
-Dubai.render();
-Paris.render();
-Lima.render();
+
+// let parent =document.getElementById('parent');
+// console.log(parent);
+// create table
+// let table=document.createElement('table');
+
+// append
+// parent.appendChild(table);
 
 
+// creating the header row:
+// let headingRow=document.createElement('tr');
+
+// append it o the table
+// table.appendChild(headingRow);
+
+
+// MAKING THE TH
+// let headings=['name','age'];
+
+// for (let i = 0; i < headings.length; i++) {
+    // make th element
+    // let thElement=document.createElement('th');
+
+    // append
+    // headingRow.appendChild(thElement);
+
+    // text conent
+    // thElement.textContent=headings[i];
+    
+// }
+
+
+// array of students
+// let students=[ahmad,mohamad,abdulraheem];
+
+// console.log(students);
+
+// for (let i = 0; i < students.length; i++) {
+    // console.log(students[i].userName);
+    // let studentRow=document.createElement('tr');
+
+    // append
+    // table.appendChild(studentRow);
+
+
+    // creating the td for name
+    // let nameData=document.createElement('td');
+
+    // append name td for tr
+    // studentRow.appendChild(nameData);
+ 
+    // give text content 
+    // nameData.textContent=students[i].userName;
+
+    
+//     let ageData=document.createElement('td');
+
+//     studentRow.appendChild(ageData);
+
+//     ageData.textContent=students[i].age
+    
+// }

@@ -1,203 +1,486 @@
-// let abdulraheem={
-//     name:'abdulraheem',
-//     job:'student',
-//     age:26,
-//     slaray:200000,
-    
-//     walk:function () {
-//         console.log('im walking here');
-//     }
+
+
+"use strict"
+
+let div=document.getElementById("result")
+
+let hours= [
+  "6am","7am","8am", "9am" ,"10am","11am","12pm","1pm","2pm","3pm","4pm","5pm","6pm","7pm"  ]
 
 
 
-// }
 
-// console.log(abdulraheem);
-// abdulraheem.walk();
-
-// let ahmad={
-//     name:'ahmad',
-//     job:'student',
-//     age:30,
-//     slaray:350,
-    
-//     walk:function () {
-//         console.log('im walking here');
-//     }
-
-
-
-// }
-
-// console.log(ahmad);
-// ahmad.walk();
-
-
-// camel case
-// userName
-
-
-// Pascal
-// Math
-// String
-// console.log(String);
-
-
-// let students=[];
-
-// function Student(name,age,weight){
-//     this.userName=name;
-//     this.age=age;
-//     this.weight=weight;
-//     console.log(this);
-
-//     this.walk=function () {
-//         console.log('im walking here',this.userName);
-//     }
-
-//     students.push(this);
-
-// }
-
-// new instance of the contstructor
-// let abdulraheem= new Student('abdulraheem',27,80);
-
-// abdulraheem.walk();
-
-// console.log(abdulraheem);
-
-// console.log(abdulraheem.weight);
-
-// console.log(Student.weight);
-
-// let ahmad= new Student('ahmad',30,95);
-// console.log(ahmad);
-// ahmad.walk();
-
-// let mohamad= new Student('mohammad',22,120);
-// console.log(mohamad);
-
-// let asmaa= new Student('asmaa',22,50);
-
-// methods should be written outside:
-// Student.prototype.talk=function () {
-    // console.log('hello from prototype method',this.age);
-    // console.log(this.age+this.weight);
-// }
-
-// mohamad.talk();
-
-
-
-// *****TABLES
-/*
-header:
-the first row in the table it has table headings
-<table>
- <tr>
-   <th>
-   </th>
-  </tr>
-</table>
-normal rows they have table data
-<table>
- <tr>
-   <th>
-   </th>
-  </tr>
-  <tr>
-   <td>
-   </td>
-  </tr>
-    <tr>
-   <td>
-   </td>
-  </tr>
   
-</table>
-footer row
-the last row in the table it has table headingsor table data
-<table>
- <tr>
-   <th>
-   </th>
-  </tr>
-  <tr>
-   <td>
-   </td>
-  </tr>
-    <tr>
-   <td>
-   </td>
-  </tr>
-   <tr>
-   <th>
-   </th>
-  </tr>
   
-</table>
-*/
-
-
-// let parent =document.getElementById('parent');
-// console.log(parent);
-// create table
 // let table=document.createElement('table');
-
-// append
-// parent.appendChild(table);
+// div.appendChild(table);
 
 
-// creating the header row:
-// let headingRow=document.createElement('tr');
+// function makeHeader(){
 
-// append it o the table
-// table.appendChild(headingRow);
+//   let headerRow= document.createElement('tr');
+//   table.appendChild(headerRow)
+//   let firstTh=document.createElement('th');
+//   headerRow.appendChild(firstTh);
+//   firstTh.textContent='name';
 
-
-// MAKING THE TH
-// let headings=['name','age'];
-
-// for (let i = 0; i < headings.length; i++) {
-    // make th element
-    // let thElement=document.createElement('th');
-
-    // append
-    // headingRow.appendChild(thElement);
-
-    // text conent
-    // thElement.textContent=headings[i];
-    
+//   for (let i = 0; i < hours; i++) {
+//     let hoursTh=document.createElement('th');
+//     headerRow.appendChild(hoursTh);
+//     hoursTh.textContent=hours[i];
+     
+//   }
 // }
+// let lastth=document.createElement('th');
+// headerRow.appendChild(lastth);
+// lastth.textContent='daily location total';
+
+// makeHeader();
 
 
-// array of students
-// let students=[ahmad,mohamad,abdulraheem];
-
-// console.log(students);
-
-// for (let i = 0; i < students.length; i++) {
-    // console.log(students[i].userName);
-    // let studentRow=document.createElement('tr');
-
-    // append
-    // table.appendChild(studentRow);
 
 
-    // creating the td for name
-    // let nameData=document.createElement('td');
 
-    // append name td for tr
-    // studentRow.appendChild(nameData);
- 
-    // give text content 
-    // nameData.textContent=students[i].userName;
+
+
+
+
+
+// let seattle = {
+//   minume: 23,
+//   max: 65,
+//   average: 6.3,
+//   storeName: "seattle", 
+//   cockiesPerHour: [],
+//   cusPerHour: function (min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;},
+//   generateCokies: function () {
+//     for (let i = 0; i < 14; i++) {
+//       let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+//      this.cockiesPerHour.push (Math.round(cockeis) )
 
     
-//     let ageData=document.createElement('td');
-
-//     studentRow.appendChild(ageData);
-
-//     ageData.textContent=students[i].age
+//     }
+//   },
+// render:function(){
+//   let h1 = document.createElement("h1")
+//   div.appendChild(h1);
+//  h1.textContent= this.storeName
+//   let ul=document.createElement("ul")
+//   div.appendChild(ul)
+//   for(let i=0; i<14; i++ ){
+//     let li=document.createElement("li")
+//     ul.appendChild(li);
+//     li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
     
+
+//    }
+
+  
 // }
+  
+// }
+// seattle.generateCokies();
+// seattle.render();
+
+
+
+
+
+
+// let tokyo = {
+//   minume: 3,
+//   max: 24,
+//   average: 1.2,
+//   storeName2: "tokyo", 
+//   cockiesPerHour: [],
+//   cusPerHour: function (min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;},
+//   generateCokies: function () {
+//     for (let i = 0; i < 14; i++) {
+//       let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+//      this.cockiesPerHour.push (Math.round(cockeis) )
+
+    
+//     }
+//   },
+// render:function(){
+//   let h1 = document.createElement("h1")
+//   div.appendChild(h1);
+//  h1.textContent= this.storeName2
+//   let ul=document.createElement("ul")
+//   div.appendChild(ul)
+//   for(let i=0; i<14; i++ ){
+//     let li=document.createElement("li")
+//     ul.appendChild(li);
+//     li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+    
+
+//    }
+
+  
+// }
+  
+// }
+// tokyo.generateCokies();
+// tokyo.render();
+
+
+
+
+
+
+
+
+// let Dubai = {
+//   minume: 11,
+//   max: 38,
+//   average: 3.7,
+//   storeName2: "Dubai", 
+//   cockiesPerHour: [],
+//   cusPerHour: function (min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;},
+//   generateCokies: function () {
+//     for (let i = 0; i < 14; i++) {
+//       let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+//      this.cockiesPerHour.push (Math.round(cockeis) )
+
+    
+//     }
+//   },
+// render:function(){
+//   let h1 = document.createElement("h1")
+//   div.appendChild(h1);
+//  h1.textContent= this.storeName2
+//   let ul=document.createElement("ul")
+//   div.appendChild(ul)
+//   for(let i=0; i<14; i++ ){
+//     let li=document.createElement("li")
+//     ul.appendChild(li);
+//     li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+    
+
+//    }
+
+  
+// }
+  
+// }
+// Dubai.generateCokies();
+// Dubai.render();
+
+
+
+
+
+// let Paris = {
+//   minume: 20,
+//   max: 38,
+//   average: 2.3,
+//   storeName2: "Paris", 
+//   cockiesPerHour: [],
+//   cusPerHour: function (min, max) {
+//     return Math.floor(Math.random() * (max - min + 1)) + min;},
+//   generateCokies: function () {
+//     for (let i = 0; i < 14; i++) {
+//       let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+//      this.cockiesPerHour.push (Math.round(cockeis) )
+
+    
+//     }
+//   },
+// render:function(){
+//   let h1 = document.createElement("h1")
+//   div.appendChild(h1);
+//  h1.textContent= this.storeName2
+//   let ul=document.createElement("ul")
+//   div.appendChild(ul)
+//   for(let i=0; i<14; i++ ){
+//     let li=document.createElement("li")
+//     ul.appendChild(li);
+//     li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+    
+
+//    }
+
+  
+// }
+  
+// }
+// Paris.generateCokies();
+// Paris.render();
+
+
+
+
+
+
+
+
+let seattle = {
+  minume: 23,
+  max: 65,
+  average: 6.3,
+  storeName2: "seattle", 
+  cockiesPerHour: [],
+  total:0,
+  cusPerHour: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;},
+  generateCokies: function () {
+    for (let i = 0; i < 14; i++) {
+      let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+     this.cockiesPerHour.push (Math.round(cockeis) )
+     this.total+= this.cockiesPerHour[i];
+
+    
+    }
+  },
+render:function(){
+  let h1 = document.createElement("h1")
+  div.appendChild(h1);
+ h1.textContent= this.storeName2
+  let ul=document.createElement("ul")
+  div.appendChild(ul)
+  for(let i=0; i<14; i++ ){
+    let li=document.createElement("li")
+    ul.appendChild(li);
+    li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+
+
+    
+
+   }
+   let totalElement =document.createElement("li")
+   ul.appendChild(totalElement);
+   totalElement.textContent=`total: ${this.total} cockeis`
+
+       
+  
+}
+  
+}
+seattle.generateCokies();
+seattle.render();
+
+
+
+
+
+
+
+
+
+
+
+let Tokyo = {
+  minume: 3,
+  max: 24,
+  average: 1.2,
+  storeName2: "Tokyo", 
+  cockiesPerHour: [],
+  total:0,
+  cusPerHour: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;},
+  generateCokies: function () {
+    for (let i = 0; i < 14; i++) {
+      let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+     this.cockiesPerHour.push (Math.round(cockeis) )
+     this.total+= this.cockiesPerHour[i];
+
+    
+    }
+  },
+render:function(){
+  let h1 = document.createElement("h1")
+  div.appendChild(h1);
+ h1.textContent= this.storeName2
+  let ul=document.createElement("ul")
+  div.appendChild(ul)
+  for(let i=0; i<14; i++ ){
+    let li=document.createElement("li")
+    ul.appendChild(li);
+    li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+
+
+    
+
+   }
+   let totalElement =document.createElement("li")
+   ul.appendChild(totalElement);
+   totalElement.textContent=`total: ${this.total} cockeis`
+
+       
+  
+}
+  
+}
+Tokyo.generateCokies();
+Tokyo.render();
+
+
+
+
+
+
+
+let Dubai = {
+  minume: 11,
+  max: 38,
+  average: 3.7,
+  storeName2: "Dubai", 
+  cockiesPerHour: [],
+  total:0,
+  cusPerHour: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;},
+  generateCokies: function () {
+    for (let i = 0; i < 14; i++) {
+      let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+     this.cockiesPerHour.push (Math.round(cockeis) )
+     this.total+= this.cockiesPerHour[i];
+
+    
+    }
+  },
+render:function(){
+  let h1 = document.createElement("h1")
+  div.appendChild(h1);
+ h1.textContent= this.storeName2
+  let ul=document.createElement("ul")
+  div.appendChild(ul)
+  for(let i=0; i<14; i++ ){
+    let li=document.createElement("li")
+    ul.appendChild(li);
+    li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+
+
+    
+
+   }
+   let totalElement =document.createElement("li")
+   ul.appendChild(totalElement);
+   totalElement.textContent=`total: ${this.total} cockeis`
+
+       
+  
+}
+  
+}
+Dubai.generateCokies();
+Dubai.render();
+
+
+
+
+
+
+
+
+let Paris = {
+  minume: 20,
+  max: 38,
+  average: 2.3,
+  storeName2: "Paris", 
+  cockiesPerHour: [],
+  total:0,
+  cusPerHour: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;},
+  generateCokies: function () {
+    for (let i = 0; i < 14; i++) {
+      let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+     this.cockiesPerHour.push (Math.round(cockeis) )
+     this.total+= this.cockiesPerHour[i];
+
+    
+    }
+  },
+render:function(){
+  let h1 = document.createElement("h1")
+  div.appendChild(h1);
+ h1.textContent= this.storeName2
+  let ul=document.createElement("ul")
+  div.appendChild(ul)
+  for(let i=0; i<14; i++ ){
+    let li=document.createElement("li")
+    ul.appendChild(li);
+    li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+
+
+    
+
+   }
+   let totalElement =document.createElement("li")
+   ul.appendChild(totalElement);
+   totalElement.textContent=`total: ${this.total} cockeis`
+
+       
+  
+}
+  
+}
+Paris.generateCokies();
+Paris.render();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let Lima = {
+  minume: 2,
+  max: 16,
+  average: 4.6,
+  storeName2: "Lima", 
+  cockiesPerHour: [],
+  total:0,
+  cusPerHour: function (min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;},
+  generateCokies: function () {
+    for (let i = 0; i < 14; i++) {
+      let cockeis= this.average * this.cusPerHour(this.minume, this.max)
+     this.cockiesPerHour.push (Math.round(cockeis) )
+     this.total+= this.cockiesPerHour[i];
+
+    
+    }
+  },
+render:function(){
+  let h1 = document.createElement("h1")
+  div.appendChild(h1);
+ h1.textContent= this.storeName2
+  let ul=document.createElement("ul")
+  div.appendChild(ul)
+  for(let i=0; i<14; i++ ){
+    let li=document.createElement("li")
+    ul.appendChild(li);
+    li.textContent= hours[i] + this.cockiesPerHour[i] +"cookies"
+
+
+    
+
+   }
+   let totalElement =document.createElement("li")
+   ul.appendChild(totalElement);
+   totalElement.textContent=`total: ${this.total} cockeis`
+
+       
+  
+}
+  
+}
+Lima.generateCokies();
+Lima.render();
+
+
+
+
+
+
